@@ -1,24 +1,41 @@
-import logo from './logo.svg';
+import React, {useState,useEffect} from 'react';
 import './App.css';
+import { auth } from './Components/Firebase';
+import Todo from './Components/Todo';
+import LogIn from './Components/LogIn';
+import SignUp from './Components/SignUp';
+import Nav from './Components/NavigationBar';
 
+import { Route, BrowserRouter, Switch } from 'react-router-dom'
 function App() {
+  const [user, setUser]=useState('');
+   useEffect( () => {
+     auth.onAuthStateChanged(user=>{
+       if(user) setUser(user)
+       else setUser(null)
+     })
+   },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    < BrowserRouter >
+      <Nav  user={user}/>
+      <div>
+        
+          <Switch>
+            <Route exact path="/"><Todo user={user}/></Route>
+            <Route path="/LogIn"><LogIn /></Route>
+            <Route path="/SignUp"><SignUp /></Route>
+            
+          
+          </Switch>
+
+            </div>
+    </ BrowserRouter >
+
+
+
+
+  </>
   );
 }
 
