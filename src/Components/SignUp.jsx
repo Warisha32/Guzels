@@ -1,6 +1,6 @@
 import React from "react";
 import { auth } from "./Firebase";
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
 const SignUp = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
@@ -16,8 +16,9 @@ const SignUp = () => {
     event.preventDefault();
     try{
         const result= await auth.createUserWithEmailAndPassword(email,password)
-        console.log(result);
-        history.pushState('/');
+        history.push('/');
+      console.log(result)
+       
     }
     catch(err){
         console.log(err);

@@ -1,22 +1,21 @@
 import React from "react";
 import { auth } from "./Firebase";
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
 const LogIn = ()=> {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
  const history=useHistory();
 
   const handleSubmit = async(event) => {
-    console.log(`
-      Email: ${email}
-      Password: ${password}
-     
-    `);
+   console.log(email,password)
 
     event.preventDefault();
+   
 try{
     const result=await auth.signInWithEmailAndPassword(email,password);
+    console.log(result)
     history.push('/');
+   
 }
 catch(err){
     console.log(err);
