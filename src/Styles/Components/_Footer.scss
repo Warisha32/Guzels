@@ -1,0 +1,89 @@
+.footer_container {
+    //max-width: 1170px;
+    // background-color: $black;
+    // margin: auto;
+    // padding: 2% 4%;
+    padding-left: 184px;
+    padding-right: 183px;
+    padding-top: 90px;
+    padding-bottom: 54px;
+   
+
+}
+
+.unstyled-list {
+    list-style: none;
+    padding-left: 36px;
+    // font-family: $font-style-1;
+    font-size: 14px;
+    li {
+        padding: 5px 0px;
+        text-decoration: none;
+    }
+    a {
+        color : #C1C1C1;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.footer-rows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.footer-column {
+    width: 25%;
+    //padding: 0 15px;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    // color: $white;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+    padding-left: 34px;
+}
+
+.footer-column li {
+    color: #C1C1C1;
+    font-size: 14px;
+    font-weight: 400;
+    // opacity: 80%;
+
+}
+
+.GaryLine {
+    // color: $grey-light;
+    // backgroundColor: $grey-light;
+    height: 0.05px;
+    width: 80%;
+    // opacity: 45%;
+
+}
+.bottomText{
+   width: 100%;
+   text-align: center;
+}
+.copyrightText{
+    // color: $white;
+    font-size: 14px;
+    font-weight: 400;
+    
+}
+.footerIcon{
+    padding: 4%;
+}
+.IConRowSection{
+    display: flex;
+    flex-direction: row;
+    padding-inline: 28px;
+}
