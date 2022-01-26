@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+
+
+$font-style-1 : 'Roboto', sans-serif;
+
+@font-face {
+    font-family: "Cera Pro";
+    src: url("../../assets/Fonts/Cera\ Pro\ Medium.otf") format("truetype");
+    font-weight: normal;
+  };
+
+$font-style-2 : 'Cera Pro', sans-serif;
+
+// Colors
+
+$white : #ffffff;
+$black : #000000;
+$red : #D81307;
+$grey-light : #F0F0F0;
+$grey-medium : #C1C1C1;
+$grey-dark : #828282;
+
