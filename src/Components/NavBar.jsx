@@ -2,8 +2,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useRef, useEffect, createRef } from 'react';
 import { NavLink, useNavigate, Link, Navigate } from "react-router-dom";
-// import "../../styles/main.scss";
-// import logo from '../../assets/Images/Logo PNG.png';
+import "../Styles/main.scss"
+ import logo from "../Assets/images/logo.png"
 // import { SearchIcon, BackIcon, HamburgerIcon } from '../SvgComponents/svgs';
 import MyAccountDropDown from './MyAccountDropDown'
 // import { store } from '../../redux/Store/store';
@@ -101,13 +101,17 @@ const Nav = props => {
   return (
     <>
       <div className="main">
-        {/* <div className="first"> <img src={logo} alt="logo"/></div> */}
+     <div className="first"> <img src={logo} alt="logo" style={{width:60 , height:60}}
+     />
+     <div>Guzels </div> 
+     </div> 
+      
         <div className="second">
-          <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to="/home">  Home</NavLink></div>
-          <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to={{pathname:"/Media", state:{refresh:true, buttonId:media_buttonId.current, mediaData:[]}}} >Media</NavLink></div>
-          <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to="/Forum">Forum</NavLink></div>
-          <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to="/Cafe" >Cafe</NavLink></div>
-          <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to="/Shop" >Shop</NavLink></div>
+          <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to="/Home">  Home</NavLink></div>
+          {/* <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to={{pathname:"/Media", state:{refresh:true, buttonId:media_buttonId.current, mediaData:[]}}} >Media</NavLink></div> */}
+          <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to="/Jwelery">Jwelery</NavLink></div>
+          <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to="/Gifts" >Gifts</NavLink></div>
+          {/* <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to="/Shop" >Shop</NavLink></div> */}
         </div>       
         <div className="third">
           <div style={{width:"11vw"}} className="search-box-container">{search? <input type="text" name="search" className="searchbox-input" onChange={handleInput} onKeyDown={handleEnter}/> : <></>}</div>
