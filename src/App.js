@@ -1,33 +1,30 @@
 import React, {useState,useEffect} from 'react';
 import './App.css';
-import { auth } from './Components/Firebase';
-import Todo from './Components/Todo';
-import LogIn from './Components/LogIn';
-import SignUp from './Components/SignUp';
-import Nav from './Components/NavigationBar';
+// import 'firebase/auth';
 
-import { Route, BrowserRouter, Switch } from 'react-router-dom'
+import Home from './Pages/home';
+import Jwelery from './Pages/Jwelery';
+import Gifts from './Pages/Gifts';
+import Nav from './Components/NavBar';
+
+import { Route, BrowserRouter, Routes } from 'react-router-dom'
 function App() {
-  const [user, setUser]=useState('');
-   useEffect( () => {
-     auth.onAuthStateChanged(user=>{
-       if(user) setUser(user)
-       else setUser(null)
-     })
-   },[])
+  
+  
+   
   return (
     <>
     < BrowserRouter >
-      <Nav  user={user}/>
+      <Nav/>
       <div>
         
-          <Switch>
-            <Route exact path="/"><Todo user={user}/></Route>
-            <Route path="/LogIn"><LogIn /></Route>
-            <Route path="/SignUp"><SignUp /></Route>
-            
-          
-          </Switch>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home/>} />
+        <Route path="/Jwelery" element={<Jwelery />} />
+        <Route path="/Gifts" element={<Gifts />} />
+      </Routes>
+     
 
             </div>
     </ BrowserRouter >
