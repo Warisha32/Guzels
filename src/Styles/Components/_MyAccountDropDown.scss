@@ -12,8 +12,8 @@
     justify-content: space-evenly;
     border-radius: 7px;
     border : solid;
-    border-color: $grey-light;
-    font-family: $font-style-1;
+    // border-color: $grey-light;
+    // font-family: $font-style-1;
 }
 
 
@@ -26,9 +26,9 @@
     flex-direction: column;
     justify-content: center;
 
-    &:hover {
-        background-color : $grey-light;   
-    }
+    // &:hover {
+        // background-color : $grey-light;   
+    // }
 }
 
 
@@ -44,11 +44,11 @@
 
 
 .dropdown-link {
-    color: $black;
+    // color: $black;
     text-decoration: none;
     font-style: normal;
     font-weight: 500;
-    font-family: $font-style-2;
+    // font-family: $font-style-2;
     font-size: 18px;
     border: none; 
 }
