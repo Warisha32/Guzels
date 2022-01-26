@@ -1,0 +1,92 @@
+#banner-container {
+    min-height: 500px;
+    height: 79vh;
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    flex-direction: column;
+  }
+  
+  .carousel-banner{
+  
+  
+  .carousel .control-dots {
+    position: absolute;
+    bottom: 50px;
+    left:10vw;
+    margin: 10px 0;
+    padding: 0;
+    width: 100%;
+    z-index: 1;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .carousel .control-dots .dot {
+    width:20px;
+    height:20px;
+    outline:none;
+    border:none;
+    box-shadow: none;
+    opacity: 1;
+  
+  }
+  
+//   .carousel .control-dots .dot.selected{
+    // background-color: $red;
+//   }
+  .carousel .control-dots .dot:hover{
+    cursor: pointer;
+  }
+  
+  
+  
+  }
+  
+  
+  #banner-text {
+    font-size: 42px;
+    font-weight: 500;
+    // font-family: $font-style-2;
+    // color: $white;
+    box-sizing: content-box;
+    display: flex;
+    width: 50%;
+    padding-left: 10vw;
+    text-align: left;
+    padding-top: 40vh;
+  }
+  
+  .banner-image-indicator {
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: row;
+    bottom: 55px;
+    left: 180px;
+    width: 50%;
+    position: absolute;
+  }
+  
+  .banner-dot {
+    width: 17px;
+    height: 17px;
+    margin-right: 10px;
+    // background-color: $white;
+    border-radius: 50%;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  .banner-dot-active {
+    width: 17px;
+    height: 17px;
+    margin-right: 10px;
+    // background-color: $red;
+    border-radius: 50%;
+  
+    &:hover {
+      cursor: pointer;
+    }
+  }
