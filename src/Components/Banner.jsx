@@ -12,10 +12,10 @@ class ImageGallaryComponent extends React.Component {
                 <Carousel
                   autoPlay
         infiniteLoop
-        interval={3000}
+        interval={2000}
         showThumbs={false}
         showStatus={false}
-        showArrows={false}
+        showArrows={true}
         className="carousel-banner">
                     <div   id="banner-container">
                         <img src={landing} alt="LandingImage" />
