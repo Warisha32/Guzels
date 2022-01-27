@@ -7,7 +7,7 @@
     justify-content: space-between;
     min-height: 79px;
     height: 10.11vh;
-    // background-color: $white;
+     background-color: $white;
     // width: 1440px;
     left: 0px;
     top: 0px;
@@ -46,17 +46,17 @@ padding-top: 15px;
     text-decoration: none;
     font-size: 18px;
     font-style: normal;
-    // font-family: $font-style-2;
+     font-family: $font-style-2;
     font-weight: 500;
     line-height: 23px;
     letter-spacing: 0em;
-    // color: $black;
+     color: $black;
     padding: 0px 0px 8px 0px;
-    // border-bottom: 2px solid $white; 
+   border-bottom: 2px solid $white; 
 
-    // &:hover {
-        // color: $grey-dark;
-    // }
+     &:hover {
+         color: $grey-dark;
+     }
 
 
 }
@@ -86,7 +86,7 @@ padding-top: 15px;
   select:-webkit-autofill,
   select:-webkit-autofill:hover,
   select:-webkit-autofill:focus {
-    // -webkit-text-fill-color: $black;
+     -webkit-text-fill-color: $black;
     transition: background-color 5000s ease-in-out 0s;
   }
 }
@@ -110,10 +110,10 @@ padding-top: 15px;
         width:40px;
         border-radius: 50%;
     }
-    // border: solid 2px $white;
+    border: solid 2px $white;
     border-radius: 23px;
     &:hover {
-        // border : solid 2px $grey-medium;
+        border : solid 2px $grey-medium;
         border-radius: 23px;
         -moz-border-radius: 23px;
         -webkit-border-radius: 23px;
@@ -131,7 +131,7 @@ padding-top: 15px;
         border-radius: 50%;
     }
     
-    // border : solid 2px $white;
+     border : solid 2px $white;
     border-radius: 23px;
     -moz-border-radius: 23px;
     -webkit-border-radius: 23px;
@@ -165,8 +165,8 @@ padding-top: 15px;
 .search-result-text {
     font-size: 17px;
     font-weight: 400;;
-    // font-family: $font-style-2;
-    // color: $grey-dark;
+    font-family: $font-style-2;
+   color: $grey-dark;
 }
 
 .hamburger{
