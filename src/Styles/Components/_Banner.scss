@@ -33,9 +33,9 @@
   
   }
   
-//   .carousel .control-dots .dot.selected{
-    // background-color: $red;
-//   }
+   .carousel .control-dots .dot.selected{
+ background-color: $red;
+  }
   .carousel .control-dots .dot:hover{
     cursor: pointer;
   }
@@ -48,8 +48,8 @@
   #banner-text {
     font-size: 42px;
     font-weight: 500;
-    // font-family: $font-style-2;
-    // color: $white;
+     font-family: $font-style-2;
+     color: $white;
     box-sizing: content-box;
     display: flex;
     width: 50%;
@@ -72,7 +72,7 @@
     width: 17px;
     height: 17px;
     margin-right: 10px;
-    // background-color: $white;
+     background-color: $white;
     border-radius: 50%;
     &:hover {
       cursor: pointer;
@@ -83,7 +83,7 @@
     width: 17px;
     height: 17px;
     margin-right: 10px;
-    // background-color: $red;
+    background-color: $red;
     border-radius: 50%;
   
     &:hover {
