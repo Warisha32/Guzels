@@ -1,6 +1,6 @@
 .footer_container {
     //max-width: 1170px;
-    // background-color: $black;
+    background-color: $black;
     // margin: auto;
     // padding: 2% 4%;
     padding-left: 184px;
@@ -14,7 +14,7 @@
 .unstyled-list {
     list-style: none;
     padding-left: 36px;
-    // font-family: $font-style-1;
+     font-family: $font-style-1;
     font-size: 14px;
     li {
         padding: 5px 0px;
@@ -45,7 +45,7 @@
 
 .footer-column h4 {
     font-size: 18px;
-    // color: $white;
+     color: $white;
     text-transform: capitalize;
     margin-bottom: 30px;
     font-weight: 500;
@@ -62,11 +62,11 @@
 }
 
 .GaryLine {
-    // color: $grey-light;
-    // backgroundColor: $grey-light;
+     color: $grey-light;
+     background: $grey-light;
     height: 0.05px;
     width: 80%;
-    // opacity: 45%;
+     opacity: 45%;
 
 }
 .bottomText{
@@ -74,7 +74,7 @@
    text-align: center;
 }
 .copyrightText{
-    // color: $white;
+     color: $white;
     font-size: 14px;
     font-weight: 400;
     
