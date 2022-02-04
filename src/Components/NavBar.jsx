@@ -4,10 +4,11 @@ import React, { useState, useRef, useEffect, createRef } from 'react';
 import { NavLink, useNavigate, Link, Navigate } from "react-router-dom";
 import "../Styles/main.scss"
  import logo from "../Assets/images/logo.png"
-// import { SearchIcon, BackIcon, HamburgerIcon } from '../SvgComponents/svgs';
-import MyAccountDropDown from './MyAccountDropDown'
+import {SearchIcon} from "../Components/Svg"
+import MyAccountDropDown from '../Components/MyAccountDropDown'
 // import { store } from '../../redux/Store/store';
-
+import Profile from "../Assets/images/Profilepicture.png";
+import { FaShoppingCart } from 'react-icons/fa';
 
 
 
@@ -115,13 +116,14 @@ const Nav = props => {
         </div>       
         <div className="third">
           <div style={{width:"11vw"}} className="search-box-container">{search? <input type="text" name="search" className="searchbox-input" onChange={handleInput} onKeyDown={handleEnter}/> : <></>}</div>
-          {/* <div className="search icon-hover" onClick={searchClickHandler}> <SearchIcon /> </div> */}
+          <div className="search icon-hover" onClick={searchClickHandler}> <SearchIcon /> </div> 
           <div ref={profile}
                 className={displayed? "active-profile icon-hover" : "profile icon-hover"}
           >
-            {/* <img src={user.photoURL} alt="img"/> */}
+             <img src={Profile} alt="img" />
+             <FaShoppingCart/>
           </div>
-           {displayed ? <MyAccountDropDown ref={dropdownRef} visible={displayed} setVisibility={setIfDisplayed} className="dropdown-component"/> : null}
+           {/* {displayed ? <MyAccountDropDown ref={dropdownRef} visible={displayed} setVisibility={setIfDisplayed} className="dropdown-component"/> : null} */}
           {/* <div className="hamburger" onClick={() => {setIfHamburgerDisplayed(true)}}> */}
             {/* {hamburgerDisplayed? */}
               {/* <HamburgerIcon /> */}
@@ -142,5 +144,4 @@ const Nav = props => {
     </>
   )
 };
-
 export default Nav
