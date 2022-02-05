@@ -6,7 +6,7 @@ import Home from './Pages/home';
 import Jwelery from './Pages/Jwelery';
 import Gifts from './Pages/Gifts';
 import Nav from './Components/NavBar';
-
+import Cart from './Pages/Cart/Cart';
 import { Route, BrowserRouter, Routes } from 'react-router-dom'
 function App() {
   
@@ -23,6 +23,7 @@ function App() {
         <Route path="/Home" element={<Home/>} />
         <Route path="/Jwelery" element={<Jwelery />} />
         <Route path="/Gifts" element={<Gifts />} />
+         <Route  path="/cart" element={<Cart/>} />
       </Routes>
      
 
