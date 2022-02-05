@@ -9,11 +9,11 @@ import MyAccountDropDown from '../Components/MyAccountDropDown'
 // import { store } from '../../redux/Store/store';
 import Profile from "../Assets/images/Profilepicture.png";
 import { FaShoppingCart } from 'react-icons/fa';
+import { connect } from "react-redux";
 
 
 
-
-const Nav = props => {
+const Nav = ({ cart }) => {
   const [displayed, setIfDisplayed] = useState(false);
   const dropdownRef = useRef();
   const profile =  useRef();
@@ -22,7 +22,16 @@ const Nav = props => {
   const [keyword, setKeyword] = useState("");
 //   const [hamburgerDisplayed, setIfHamburgerDisplayed] = useState(false);
   const navigate = useNavigate();
+  const [cartCount, setCartCount] = useState(0);
 
+  useEffect(() => {
+    let count = 0;
+    cart.forEach((item) => {
+      count += item.qty;
+    });
+
+    setCartCount(count);
+  }, [cart, cartCount]);
 
   const media_buttonId = useRef(0);
 
@@ -121,7 +130,12 @@ const Nav = props => {
                 className={displayed? "active-profile icon-hover" : "profile icon-hover"}
           >
              <img src={Profile} alt="img" />
-             <FaShoppingCart/>
+
+          </div>
+          <div>
+            <Link to="/cart"><FaShoppingCart  className={"profile icon-hover"}/>
+          <div className="cart__counter">{cartCount}</div></Link>
+          
           </div>
            {/* {displayed ? <MyAccountDropDown ref={dropdownRef} visible={displayed} setVisibility={setIfDisplayed} className="dropdown-component"/> : null} */}
           {/* <div className="hamburger" onClick={() => {setIfHamburgerDisplayed(true)}}> */}
@@ -144,4 +158,10 @@ const Nav = props => {
     </>
   )
 };
-export default Nav
+const mapStateToProps = (state) => {
+  return {
+    cart: state.shop.cart,
+  };
+};
+
+export default connect(mapStateToProps)(Nav);
