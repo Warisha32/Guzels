@@ -1,4 +1,4 @@
-import * as actionTypes from "./shopping-types";
+import * as actionTypes from "./Types";
 
 export const addToCart = (itemID) => {
   return {
