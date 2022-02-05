@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../Styles/main.scss";
-
+import {FaRegTimesCircle } from 'react-icons/fa';
 import { connect } from "react-redux";
 import {
   adjustItemQty,
@@ -43,10 +43,7 @@ const CartItem = ({ item, adjustQty, removeFromCart }) => {
           onClick={() => removeFromCart(item.id)}
           className="actions__deleteItemBtn"
         >
-          <img
-            src="https://image.flaticon.com/icons/svg/709/709519.svg"
-            alt=""
-          />
+          <FaRegTimesCircle/>
         </button>
       </div>
     </div>
