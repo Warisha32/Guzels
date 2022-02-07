@@ -1,10 +1,11 @@
 import React from "react";
 import { auth } from "./Firebase";
-import { useHistory } from "react-router-dom";
+import {useNavigate} from 'react-router-dom';
+
 const SignUp = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
-  const history= useHistory()
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     console.log(`
@@ -16,7 +17,7 @@ const SignUp = () => {
     event.preventDefault();
     try{
         const result= await auth.createUserWithEmailAndPassword(email,password)
-        history.push('/');
+        navigate('/');
       console.log(result)
        
     }
