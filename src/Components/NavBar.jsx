@@ -11,9 +11,9 @@ import Profile from "../Assets/images/Profilepicture.png";
 import { FaShoppingCart } from 'react-icons/fa';
 import { connect } from "react-redux";
 
+import { auth } from "./Firebase";
 
-
-const Nav = ({ cart }) => {
+const Nav = ({ cart,user }) => {
   const [displayed, setIfDisplayed] = useState(false);
   const dropdownRef = useRef();
   const profile =  useRef();
@@ -121,7 +121,7 @@ const Nav = ({ cart }) => {
           {/* <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to={{pathname:"/Media", state:{refresh:true, buttonId:media_buttonId.current, mediaData:[]}}} >Media</NavLink></div> */}
           <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to="/Jwelery">Jwelery</NavLink></div>
           <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to="/Gifts" >Gifts</NavLink></div>
-          {/* <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to="/Shop" >Shop</NavLink></div> */}
+          <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to="/login" >Login</NavLink></div> 
         </div>       
         <div className="third">
           <div style={{width:"11vw"}} className="search-box-container">{search? <input type="text" name="search" className="searchbox-input" onChange={handleInput} onKeyDown={handleEnter}/> : <></>}</div>
@@ -132,6 +132,12 @@ const Nav = ({ cart }) => {
              <img src={Profile} alt="img" />
 
           </div>
+          <button onClick={
+     () => {
+       auth.signOut();
+      
+     }
+   }>logout</button>
           <div>
             <Link to="/cart"><FaShoppingCart  className={"profile icon-hover"}/>
           <div className="cart__counter">{cartCount}</div></Link>
