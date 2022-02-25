@@ -121,7 +121,7 @@ const Nav = ({ cart,user }) => {
           {/* <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to={{pathname:"/Media", state:{refresh:true, buttonId:media_buttonId.current, mediaData:[]}}} >Media</NavLink></div> */}
           <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to="/Jwelery">Jwelery</NavLink></div>
           <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to="/Gifts" >Gifts</NavLink></div>
-          <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to="/login" >Login</NavLink></div> 
+          {/* <div style={{width:"6vw", height:40, display:"inline-block"}} align="center"><NavLink activeClassName="link1" className="link" to="/login" >Login</NavLink></div>  */}
         </div>       
         <div className="third">
           <div style={{width:"11vw"}} className="search-box-container">{search? <input type="text" name="search" className="searchbox-input" onChange={handleInput} onKeyDown={handleEnter}/> : <></>}</div>
