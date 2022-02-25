@@ -15,7 +15,7 @@ const LogIn = ()=> {
 try{
     const result=await auth.signInWithEmailAndPassword(email,password);
     console.log(result)
-    navigate('/home');
+    navigate('/');
    
 }
 catch(err){
