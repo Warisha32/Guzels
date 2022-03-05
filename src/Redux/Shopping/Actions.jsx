@@ -34,3 +34,55 @@ export const loadCurrentItem = (item) => {
     payload: item,
   };
 };
+
+
+export const requestLogin = () => {
+  return {
+    type: actionTypes.LOGIN_REQUEST
+  };
+};
+
+export const receiveLogin = user => {
+  return {
+    type: actionTypes.LOGIN_SUCCESS,
+    user
+  };
+};
+
+export const loginError = () => {
+  return {
+    type: actionTypes.LOGIN_FAILURE
+  };
+}
+
+export const LOGOUTREQUEST = () => {
+  return {
+    type: actionTypes.LOGOUT_REQUEST
+  };
+}
+
+export const LOGOUTSUCCESS = () => {
+  return {
+    type: actionTypes.LOGOUT_SUCCESS
+  };
+}
+
+export const LOGOUTFAILURE = () => {
+  return {
+    type: actionTypes.LOGOUT_FAILURE
+  };
+}
+
+
+export const VERIFYSUCCESS = () => {
+  return {
+    type: actionTypes.VERIFY_SUCCESS
+  };
+}
+
+
+export const VERIFYREQUEST = () => {
+  return {
+    type: actionTypes.VERIFY_REQUEST
+  };
+}
